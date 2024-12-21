@@ -1,19 +1,19 @@
 import type { Metadata, Site } from "@types";
 
 export const SITE: Site = {
-  TITLE: "Astro Micro Academics",
-  DESCRIPTION: "Astro Micro Academics is for academic user.",
-  EMAIL: "youremial@gmail.com",
+  TITLE: "Harshit Garg",
+  DESCRIPTION: "Landing page for Harshit.",
+  EMAIL: "hg1229@gmail.com",
   NUM_POSTS_ON_HOMEPAGE: 2,
   NUM_PUBLICATIONS_ON_HOMEPAGE: 3,
-  SITEURL: 'https://astro-micro-academic.vercel.app' // Update here to link the RSS icon to your website rss
+  SITEURL: 'https://harshitgarg.in' // Update here to link the RSS icon to your website rss
 };
 
-export const HIGHLIGHTAUTHOR = "John B"
+export const HIGHLIGHTAUTHOR = "Harshit Garg"
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "Astro Micro is an accessible theme for Astro.",
+  DESCRIPTION: "About Harshit.",
 };
 
 export const BLOG: Metadata = {
@@ -30,7 +30,7 @@ export const RESEARCH: Metadata = {
 export const CV: Metadata = {
   TITLE: "CV",
   DESCRIPTION:
-    "your cv",
+    "My cv",
 };
 
 export const TAGS: Metadata = {

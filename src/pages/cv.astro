@@ -5,13 +5,17 @@ import Container from "@components/Container.astro";
 import { CV } from "@consts";
 import CVCard from "@components/CVCard.astro";
 
-// TO Modify
+// Updated work experience
 const works = [
-  {company:"Company A", time: "2022-Present", job_title: "Research Scientist", location: "London, UK", description: "Your Notes about the job"},
-  {company:"Company A", time: "2022-Present", job_title: "Research Scientist", location: "London, UK", description: "Your Notes about the job"},
+  {company: "Microsoft Research", time: "Aug'22-Aug'24", job_title: "Research Fellow", location: "Bangalore, India", description: "AI + Cloud Reliability: Automated reference implementation generation for cloud services, improving code coverage from 8% to 71%. Enhanced observability of .NET-based Azure services using binary instrumentation."},
+  {company: "University of Edinburgh", time: "Jan'22-Jul'22", job_title: "Research Intern", location: "Edinburgh, UK", description: "Serverless Computing: Developed vSwarm benchmarks for vHive serverless framework. Conducted experiments using gem5 to measure L1 cache size impact on CPI."},
+  {company: "Walmart Labs", time: "May'21-Jul'21", job_title: "Software Development Intern", location: "Bangalore, India", description: "Big Data Platforms: Developed Python and MySQL application for database metadata retrieval. Implemented background services for live metadata store updates, used in stream analytics."}
 ]
+
+// Updated education
 const educations = [
-  {school:"University 1", time: "2022-Present", job_title: "BEng in Electronic Information Engineering", location: "London, UK", description: "Your Notes about the study"},
+  {school: "Northeastern University", time: "2024-Date", job_title: "PhD in Computer Science", location: "Boston, MA, USA", description: "Advised by Prof Frank Tip. Working on static program analysis using CodeQL for Java and JavaScript, and developing TLA+ specifications for compositional model-checking."},
+  {school: "BITS Pilani", time: "2018-2022", job_title: "BE in Computer Science", location: "India", description: "CGPA: 8.59/10"}
 ]
 ---
 

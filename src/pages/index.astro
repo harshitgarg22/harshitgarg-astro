@@ -8,6 +8,7 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import PublicationCard from "@components/PublicationCard.astro";
 import SocialIcons from "@components/SocialIcons.astro";
+import Image from "astro/components/Image.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -25,71 +26,69 @@ const publications: CollectionEntry<"publications">[] = (
   <Container>
     <aside data-pagefind-ignore>
       <h1 class="animate font-semibold text-black dark:text-white">
-        Astro Micro Academics 🍄
+        Hi there! 👋
       </h1>
       <div class="space-y-16">
         <section>
           <article class="space-y-4">
             <span class="animate">
               <p>
-                Astro Micro Academics is a theme for <Link
-                  href="https://astro.build/">Astro</Link
-                > and tailored for academic users and researchers. It's built on <Link href="https://astro.build/themes/details/astro-micro/">Astro Micro</Link> and
-                <Link href="https://github.com/markhorn-dev">
-                  Mark Horn's
-                </Link> popular theme <Link
-                  href="https://astro.build/themes/details/astronano/"
-                  >Astro Nano</Link
-                >. 
+                I am a PhD student at Northeastern University, working at the <Link
+                  href="https://prl.khoury.northeastern.edu/"
+                  >Programming Research Lab</Link
+                >. Largely, I work at the intersection of Distributed Systems +
+                Programming Languages + Testing.
               </p>
+
               <p>
-                Micro Academics adds features like <span class="text-red-500">tags, and blog math support</span> and also inherits <Link href="https://pagefind.app/"
-                  >Pagefind</Link
-                > for search, <Link href="https://giscus.app">Giscus</Link> for comments,
-                from Astro Micro. See full changes this <Link
-                  href="/blog/00-academic-astro">here</Link
-                >.
+                I am currently working on developing static data-flow analysis
+                using CodeQL for Java programs to optimize performance in JVM. I
+                am also working on inferring type information in WASM-generated
+                JavaScript code. Recently, a fun thing I worked on was
+                compositional TLA+ specification for a custom Raft
+                implementation.
               </p>
             </span>
             <span class="animate">
               <p>
-                Micro Academics still comes with everything great about Micro and Nano — full type
-                safety, a sitemap, an RSS feed, and Markdown + MDX support.
-                Styled with TailwindCSS and preconfigured with system, light,
-                and dark themes.
-              </p>
-              <p>
-                Visit
-                <Link href="https://github.com/jingwu2121/astro-micro-academic">
-                  Astro Micro Academics on GitHub
-                </Link>
-                to fork the repository to get started.
+                Before this, I was a Research Fellow at Microsoft Research
+                India, advised by <b>Dr. Akash Lal</b> and <b>Dr. Suman Nath</b
+                >. There, I worked at the intersection of <b>AI + SE</b>,
+                specifically using LLMs such as GPT* to generate reference
+                implementations of RESTful APIs in C#, and use them for test
+                generation. Before that, I worked with OpenTelemetry and dynamic
+                binary instrumentation for zero-touch distributed tracing of
+                .NET services.
               </p>
             </span>
-            
+            <span class="animate">
+              <p>
+                During my Bachelor Thesis, I visited the <Link
+                  href="https://easelab.inf.ed.ac.uk/">EASE Lab</Link
+                > at University of Edinburgh, advised by <b>Dr. Boris Grot</b>.
+                There, I worked on Serverless computing, specifically creating a
+                set of microbenchmarks for testing the performance of serverless
+                platforms, <Link
+                  href="https://github.com/vhive-serverless/vSwarm">vSwarm</Link
+                >.
+              </p>
+
+              <p>
+                I finished my Bachelors in Computer Science and Engineering at
+                BITS Pilani, where I took a variety of courses relating to
+                Networks, Operating Systems, and Parallel Computing.
+              </p>
+            </span>
           </article>
         </section>
 
-        <section class="animate space-y-2 border-2 border-red-800 text-red-800 dark:border-red-400 border-dashed p-2 dark:text-red-400">
-          📢📢 Your important Information (Open for job/Recruiting students)
+        <section
+          class="animate space-y-2 border-2 border-dashed border-red-800 p-2 text-red-800 dark:border-red-400 dark:text-red-400"
+        >
+          📢📢 Currently looking for summer internships for 2025!
         </section>
 
-        <section class="animate space-y-6">
-          <span class="animate">
-            <h4 class="font-semibold text-black dark:text-white">
-              Let's Connect
-            </h4>
-            <article>
-              <p>
-                If you want to get in touch with me about something or just to say
-                hi, reach out on social media or send me an email.
-              </p>
-            </article>
-            <SocialIcons icon_size={'text-3xl'} />
-          </span>
-        </section>
-
-        <section class="animate space-y-6">
+        <!-- <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
             <h2 class="font-semibold text-black dark:text-white">
               Research Interests
@@ -99,24 +98,28 @@ const publications: CollectionEntry<"publications">[] = (
             <li>3D Vision</li>
             <li>AIGC</li>
           </ul>
-        </section>
-        
+        </section> -->
+
         <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="font-semibold text-black dark:text-white">
-              News
-            </h2>
+            <h2 class="font-semibold text-black dark:text-white">News</h2>
           </div>
-          <ul class="not-prose flex flex-col gap-4 overflow-y-auto max-h-[150px] scroll_bar">
-            <li>[06/2024]: Your News1</li>
-            <li>[06/2024]: Your <span class="text-red-600">News2</span></li>
-            <li>[06/2024]: Your <span class="text-red-600">News2</span></li>
+          <ul
+            class="not-prose scroll_bar flex max-h-[150px] flex-col gap-4 overflow-y-auto"
+          >
+            <li>
+              [09/2024]: Joined Northeastern for a PhD, advised by <Link
+                href="https://www.franktip.org/">Frank Tip</Link
+              >.
+            </li>
+            <li>[08/2022]: Joined MSR as a Research Fellow!</li>
+            <!-- <li>[06/2024]: Your <span class="text-red-600">News2</span></li> -->
             <!-- <li>[06/2024]: Your <span class="text-red-600">News2</span></li>
             <li>[06/2024]: Your <span class="text-red-600">News2</span></li> -->
           </ul>
         </section>
 
-        <section class="animate space-y-6">
+        <!-- <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
             <h2 class="font-semibold text-black dark:text-white">
               Recent research
@@ -132,9 +135,9 @@ const publications: CollectionEntry<"publications">[] = (
               ))
             }
           </ul>
-        </section>
+        </section> -->
 
-        <section class="animate space-y-6">
+        <!-- <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
             <h2 class="font-semibold text-black dark:text-white">
               Latest posts
@@ -150,8 +153,22 @@ const publications: CollectionEntry<"publications">[] = (
               ))
             }
           </ul>
-        </section>
+        </section> -->
 
+        <section class="animate space-y-6">
+          <span class="animate">
+            <h4 class="font-semibold text-black dark:text-white">
+              Let's Connect
+            </h4>
+            <article>
+              <p>
+                If you want to get in touch with me about something or just to
+                say hi, feel free to send me an email.
+              </p>
+            </article>
+            <!-- <SocialIcons icon_size={"text-3xl"} /> -->
+          </span>
+        </section>
       </div>
     </aside>
   </Container>

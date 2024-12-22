@@ -9,6 +9,8 @@ import type { CollectionEntry } from "astro:content";
 import PublicationCard from "@components/PublicationCard.astro";
 import SocialIcons from "@components/SocialIcons.astro";
 import Image from "astro/components/Image.astro";
+import myImage from "../images/IMG_20210309_172631.jpg";
+import { Picture } from "astro:assets";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -29,27 +31,40 @@ const publications: CollectionEntry<"publications">[] = (
         Hi there! 👋
       </h1>
       <div class="space-y-16">
-        <section>
-          <article class="space-y-4">
-            <span class="animate">
-              <p>
-                I am a PhD student at Northeastern University, working at the <Link
-                  href="https://prl.khoury.northeastern.edu/"
-                  >Programming Research Lab</Link
-                >. Largely, I work at the intersection of Distributed Systems +
-                Programming Languages + Testing.
-              </p>
-
-              <p>
-                I am currently working on developing static data-flow analysis
-                using CodeQL for Java programs to optimize performance in JVM. I
-                am also working on inferring type information in WASM-generated
-                JavaScript code. Recently, a fun thing I worked on was
-                compositional TLA+ specification for a custom Raft
-                implementation.
-              </p>
-            </span>
-            <span class="animate">
+        <section class="">
+          <article class="float:left space-y-4 overflow-visible">
+            <div class="flex-column sm:flex">
+              <span class="animate">
+                <p>
+                  I am a PhD student at Northeastern University, working at the <Link
+                    href="https://prl.khoury.northeastern.edu/"
+                    >Programming Research Lab</Link
+                  >. Largely, I work at the intersection of Distributed Systems
+                  + Programming Languages + Testing.
+                </p>
+                <p>
+                  I am currently working on developing static data-flow analysis
+                  using CodeQL for Java programs to optimize performance in JVM.
+                  I am also working on inferring type information in
+                  WASM-generated JavaScript code. Recently, a fun thing I worked
+                  on was compositional TLA+ specification for a custom Raft
+                  implementation.
+                </p>
+              </span>
+              <Image
+                src={myImage}
+                alt={"Me, circa 2021"}
+                class="shadow-blue-gray-900/50 sm:mx-4 my-0 w-64 h-64 shadow-xl dark:shadow-white/5 rounded-full object-cover"
+              />
+            </div>
+            <div class="inline-flex items-center justify-center w-full">
+              <hr class="w-64 h-1 my-8 bg-brick-red/85 border-0 rounded dark:bg-gray-700">
+              <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+                  <svg class="w-4 h-4 text-gray-700 dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+              <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+            </svg>
+              </div>
+          </div>            <span class="animate">
               <p>
                 Before this, I was a Research Fellow at Microsoft Research
                 India, advised by <b>Dr. Akash Lal</b> and <b>Dr. Suman Nath</b

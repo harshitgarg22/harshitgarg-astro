@@ -8,7 +8,11 @@ export default {
       fontFamily: {
         sans: ["Geist Sans", ...defaultTheme.fontFamily.sans],
         mono: ["Geist Mono", ...defaultTheme.fontFamily.mono],
+        heading: ["Texturina", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        'brick-red': '#570801',
+      }
     },
   },
   plugins: [require("@tailwindcss/typography")],
